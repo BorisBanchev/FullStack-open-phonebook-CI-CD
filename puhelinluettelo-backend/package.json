@@ -1,0 +1,33 @@
+{
+  "name": "puhelinluettelo-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "build:ui": "rm -rf dist && cd ~/Fullstack-Open-Course/Osa2/puhelinluettelo/ && npm run build && cp -r dist ~/Full-stack-Open-part3/puhelinluettelo-backend",
+    "deploy": "cd ~/Full-stack-Open-part3/puhelinluettelo-backend && fly deploy",
+    "deploy:full": "npm run build:ui && npm run deploy",
+    "logs:prod": "fly logs",
+    "lint": "eslint ."
+  },
+  "author": "Boris Banchev",
+  "license": "MIT",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.8.4",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.16.0",
+    "@flydotio/dockerfile": "^0.5.9",
+    "@stylistic/eslint-plugin-js": "^2.12.1",
+    "eslint": "^9.16.0",
+    "globals": "^15.13.0",
+    "nodemon": "^3.1.7"
+  }
+}
