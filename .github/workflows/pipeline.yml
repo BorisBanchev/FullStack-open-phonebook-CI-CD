@@ -44,7 +44,7 @@ jobs:
           rm -rf dist
           cd ../puhelinluettelo-frontend
           npm run build
-          cp -r puhelinluettelo-frontend/dist ../puhelinluettelo-backend
+          cp -r ./dist ../puhelinluettelo-backend
 
       - name: Setup Flyctl
         if: ${{ github.event_name == 'push' && !contains(toJson(join(github.event.commits.*.message, ', ')), '#skip') }}
