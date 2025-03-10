@@ -31,12 +31,12 @@ jobs:
       - name: check style of backend
         run: |
           cd puhelinluettelo-backend
-          npm run eslint
+          npm run lint
 
       - name: check style of frontend
         run: |
           cd puhelinluettelo-frontend
-          npm run eslint
+          npm run lint
 
       - name: building the code
         run: |
