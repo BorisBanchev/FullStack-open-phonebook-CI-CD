@@ -1,6 +1,6 @@
 # Simple pipeline for the FullStack-open-phonebook app
 
-Pipeline checks currently:
+Pipeline Checks Currently:
 
 - Linting errors
 - Builds the application code
